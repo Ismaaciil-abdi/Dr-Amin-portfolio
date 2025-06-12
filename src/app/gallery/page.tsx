@@ -1,5 +1,5 @@
 import Image from "next/Image";
-import case1Bf from "../../assets/showcase/case1bf.jpg";
+import case1Bf from "@/assets/showcase/case1bf_1.jpeg";
 import Link from "next/link";
 
 export default function Gallery() {

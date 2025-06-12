@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import case1Bf from ".././assets/showcase/case1bf.jpg";
+import caseImage from "@/assets/showcase/case1bf_1.jpeg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -8,7 +8,7 @@ export default function MyWork() {
   const showcase = [
     {
       id: 1,
-      pationImg: case1Bf,
+      pationImg: caseImage,
       alt: "Case one before",
       title: "Dislodged upper anterior PFM bridge",
       describtion:

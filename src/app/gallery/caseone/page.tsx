@@ -1,9 +1,9 @@
 import Image from "next/Image";
-import case1Xray from "../../../assets/showcase/case1xray.jpg";
-import case1Bf from "../../../assets/showcase/case1bf.jpg";
-import case1Af from "../../../assets/showcase/case1af.jpg";
-import conc1 from "../../../assets/showcase//conc1.jpg";
-import conc2 from "../../../assets/showcase//conc2.jpg";
+import case1Xray from "@/assets/showcase/case1xray.jpeg";
+import case1Bf from "@/assets/showcase/case1bf_1.jpeg";
+import case1Af from "@/assets/showcase/case1af.jpeg";
+import conc1 from "@/assets/showcase/conc1.jpeg";
+import conc2 from "@/assets/showcase/conc2.jpeg";
 
 export default function CaseOne() {
   return (
