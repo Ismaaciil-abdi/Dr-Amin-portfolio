@@ -1,4 +1,4 @@
-import Image from "next/Image";
+import Image from "next/image";
 import case1Xray from "@/assets/showcase/case1xray.jpeg";
 import case1Bf from "@/assets/showcase/case1bf_1.jpeg";
 import case1Af from "@/assets/showcase/case1af.jpeg";
