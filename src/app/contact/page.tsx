@@ -1,6 +1,5 @@
 import ContactForm from "@/components/contact";
 import Linkedin from "@/assets/icons/linkedin.png";
-import Gmail from "@/assets/icons/envelope.png";
 import FaceBook from "@/assets/icons/facebook.png";
 import Link from "next/link";
 import Image from "next/image";
