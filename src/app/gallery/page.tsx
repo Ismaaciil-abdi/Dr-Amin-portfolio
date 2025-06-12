@@ -1,4 +1,4 @@
-import Image from "next/Image";
+import Image from "next/image";
 import case1Bf from "@/assets/showcase/case1bf_1.jpeg";
 import Link from "next/link";
 
