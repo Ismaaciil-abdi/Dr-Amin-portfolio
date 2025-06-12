@@ -37,7 +37,7 @@ export default function Footer() {
             className=" underline hover:text-zinc-400"
             href="https://wa.link/3ito0t"
           >
-            WhatsApp &#8599;
+            WhatsApp
           </Link>{" "}
           if you have any questions or just want to say hi!, feel free to reach
           out!

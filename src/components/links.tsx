@@ -8,16 +8,16 @@ export default function Links() {
           href="https://www.facebook.com/amin.abdirahman.117497"
           className="hover:text-zinc-400"
         >
-          Facebook &#8599;
+          Facebook
         </Link>
         <Link
           href="https://www.linkedin.com/in/amin-abdi-ismael-724617226/"
           className="hover:text-zinc-400"
         >
-          Linkedln &#8599;
+          Linkedln
         </Link>
         <Link href="https://wa.link/3ito0t" className="hover:text-zinc-400">
-          WhatsApp &#8599;
+          WhatsApp
         </Link>
       </nav>
     </div>
