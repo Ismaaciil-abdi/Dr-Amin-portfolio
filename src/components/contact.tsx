@@ -16,7 +16,7 @@ export default function ContactForm() {
       <CardHeader>
         <CardTitle>Contact Me</CardTitle>
         <CardDescription>
-          Fill out the form below and I'll get back to you soon.
+          Fill out the form below and I&apos;ll get back to you soon.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -43,8 +43,8 @@ export default function ContactForm() {
           />
         </div>
         <label htmlFor="Error" className="text-red-400 text-sm text-center">
-          I'm working on this form please click the email beside the contact
-          form to open you default mail app
+          I&apos;m working on this form please click the email beside the
+          contact form to open you default mail app
         </label>
         <Button className="w-full bg-zinc-900 hover:bg-zinc-800 text-zinc-200">
           Submit

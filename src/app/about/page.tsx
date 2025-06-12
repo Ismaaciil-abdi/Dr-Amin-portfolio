@@ -25,8 +25,8 @@ export default function About() {
             <div className="p-3">
               <div className="size-10 rounded-md mb-5"></div>
               <p>
-                Hi, I'm Amin Abdi Ismail, a 23-year-old dentist from Borama. to
-                find out more about me scroll down.
+                Hi, I&apos;m Amin Abdi Ismail, a 23-year-old dentist from
+                Borama. to find out more about me scroll down.
               </p>
             </div>
           </motion.div>
