@@ -1,8 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/Image";
-import case1Bf from "@/assets/showcase/case1bf.jpg";
+import case1Bf from ".././assets/showcase/case1bf.jpg";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function MyWork() {
   const showcase = [
