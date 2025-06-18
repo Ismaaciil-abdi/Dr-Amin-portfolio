@@ -6,6 +6,7 @@ import Gradution from "@/assets/gradution.jpeg";
 import LetterCv from "@/assets/letter-cv.png";
 import Links from "@/components/links";
 import { BackgroundEduc } from "@/components/background";
+import { url } from "inspector";
 export default function About() {
   return (
     <main className="container pt-32 mb-16 max-w-3xl mx-auto">
@@ -17,20 +18,27 @@ export default function About() {
         transition={{ duration: 0.6 }}
       >
         <div className="flex flex-col gap-5 px-5 md:grid md:grid-cols-4 md:grid-rows-4 md:gap-4 mx-w-5xl mx-auto">
-          <motion.div
-            whileHover={{ rotate: 2 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            className="col-span-2 row-span-2 rounded-lg shadow-md bg-white border hover:bg-indigo-400"
-          >
+          <div className="col-span-2 row-span-2 rounded-lg mesh-gradient">
             <div className="p-3">
-              <div className="size-10 rounded-md mb-5"></div>
+              <div className="flex items-center gap-2">
+                <div className="size-12 bg-white rounded-full shadow-lg"></div>
+                <div>
+                  <h1 className="text-zinc-900 text-lg font-semibold -mb-0.5">
+                    Amin Abdi
+                  </h1>
+                  <p className="font-light text-sm text-zinc-600 -mt-0.5">
+                    username
+                  </p>
+                </div>
+              </div>
+              <hr className="mb-5 mt-5" />
               <p>
                 Hi, I&apos;m Amin Abdi Ismail, a 23-year-old dentist from
                 Borama. to find out more about me scroll down.
               </p>
             </div>
-          </motion.div>
-          <div className="col-span-2 row-span-3 col-start-1 row-start-3 bg-zinc-900 rounded-lg ">
+          </div>
+          <div className="col-span-2 row-span-3 col-start-1 row-start-3 bg-radial-[at_50%_75%] from-zinc-700 to-zinc-900 to-75% rounded-lg ">
             <div className="flex flex-col items-center p-5 mt-5">
               <Image
                 src={LetterCv}
@@ -64,7 +72,7 @@ export default function About() {
             />
           </div>
           <div className="col-span-2 col-start-3 row-start-5 bg-zinc-900 rounded-lg">
-            <div className="p-5">
+            <div className="p-5 flex justify-center">
               <Links />
             </div>
           </div>

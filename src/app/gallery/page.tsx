@@ -1,19 +1,30 @@
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import case1Bf from "@/assets/showcase/case1bf_1.jpeg";
 import Link from "next/link";
 
 export default function Gallery() {
   return (
-    <main className="container pt-32 mb-16 max-w-3xl mx-auto">
-      <div className="px-4  md:px-8 lg:px-0 flex flex-col md:flex-row items-center gap-4">
+    <motion.main
+      initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
+      whileInView={{ filter: "blur(0)", opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="container pt-32 mb-16 max-w-3xl mx-auto"
+    >
+      <h1 className="text-2xl md:text-3xl font-bold text-center mb-8 font-serif">
+        Where Smiles Come to Life
+      </h1>
+      <div className="px-4 mt-16 md:px-8 lg:px-0 flex flex-col md:flex-row items-center gap-4">
         <Image
-          className="rounded-lg"
+          className="rounded-lg w-full md:w-[230px]"
           src={case1Bf}
           alt="Case one before"
-          width={350}
-          height={350}
+          width={200}
+          height={200}
         />
-        <div className="text-center md:text-left">
+        <div className="flex flex-col justify-center md:text-left">
           <h1 className="text-lg md:text-2xl">
             Dislodged upper anterior PFM bridge
           </h1>
@@ -29,6 +40,6 @@ export default function Gallery() {
           </Link>
         </div>
       </div>
-    </main>
+    </motion.main>
   );
 }
