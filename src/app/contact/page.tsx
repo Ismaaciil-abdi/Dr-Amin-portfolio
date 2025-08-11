@@ -27,20 +27,11 @@ export default function Contact() {
     <main className="container pt-32 mb-16 max-w-3xl mx-auto flex flex-col md:flex-row p-5 gap-12 items-center justify-between">
       <div>
         <h1 className="text-3xl font-serif font-bold">Contact Me</h1>
-        <p className="mt-2  text-muted-foreground">
-          Have questions or feedback? I'd love to hear from you!
-        </p>
-        <p className="mt-2 mb-4  text-muted-foreground">
+        <p className="mt-2 text-muted-foreground break-words whitespace-normal">
+          Have questions or feedback? I'd love to hear from you! <br />
           You can reach me through the following channels:
         </p>
-        <Link href={mailtoHref} className="italic">
-          armstrong2002315@gmail.com
-        </Link>
-        <br />
-        <Link href="https://wa.link/3ito0t" className="italic">
-          <span className="absolute  size-3 animate-ping rounded-full bg-sky-400 opacity-75"></span>
-          <span className="relative  rounded-full ">252 63 3089547</span>
-        </Link>
+
         <div className="flex md:flex-rew justify-center md:justify-start mt-4 gap-2">
           {Links.map((link) => (
             <Link
