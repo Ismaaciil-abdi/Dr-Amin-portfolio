@@ -1,0 +1,5 @@
+allowBuilds:
+  '@tailwindcss/oxide': false
+  '@tsparticles/engine': false
+  sharp: false
+  unrs-resolver: false

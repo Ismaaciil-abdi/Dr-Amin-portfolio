@@ -1,9 +1,13 @@
 import Link from "next/link";
+import { Download } from "lucide-react";
 
 export default function Header() {
   return (
-    <div className="flex justify-center items-center fixed top-3 w-full z-[9999]">
-      <nav className="flex items-center md:gap-1 p-4 md:p-2 border border-zinc-300 rounded-full bg-white/45  text-zinc-800 backdrop-blur-md  font-sans">
+    <header className="fixed inset-x-0 top-3 z-[9999] flex justify-center px-3 sm:px-4">
+      <nav
+        aria-label="Main navigation"
+        className="flex w-full max-w-max items-center gap-0.5 rounded-full border border-zinc-200/90 bg-white/80 p-1.5 text-zinc-800 shadow-lg shadow-zinc-900/5 backdrop-blur-xl sm:gap-1 sm:p-2"
+      >
         <Link href="/" className="nav-item">
           Home
         </Link>
@@ -24,11 +28,13 @@ export default function Header() {
           href="/amin-abdi-ismail-cv.pdf"
           download
           target="_blank"
-          className="nav-item bg-zinc-800 text-zinc-200 rounded-full px-4 py-2 hover:bg-zinc-700  transition-colors duration-200 hidden md:block"
+          className="ml-1 inline-flex items-center gap-1.5 rounded-full bg-zinc-900 px-3 py-2 text-xs font-semibold text-white shadow-sm transition-all duration-200 hover:-translate-y-px hover:bg-zinc-700 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2 sm:px-4 sm:text-sm"
         >
-          Download cv
+          <Download aria-hidden="true" className="size-3.5 sm:size-4" />
+          <span className="sm:hidden">CV</span>
+          <span className="hidden sm:inline">Download CV</span>
         </Link>
       </nav>
-    </div>
+    </header>
   );
 }

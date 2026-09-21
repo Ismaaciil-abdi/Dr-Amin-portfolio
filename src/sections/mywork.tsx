@@ -1,4 +1,5 @@
 "use client";
+import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
 import caseImage from "@/assets/showcase/case1bf_1.jpeg";
 import Link from "next/link";
@@ -21,32 +22,29 @@ export default function MyWork() {
       whileInView={{ filter: "blur(0)", opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
-      className="flex flex-wrap gap-6 justify-center"
+      className="mx-auto max-w-4xl"
     >
       {showcase.map((cases) => (
-        <div key={cases.id}>
-          <div className="bg-zinc-50 border rounded-lg w-[350px]">
+        <article key={cases.id} className="group grid overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-[#f8f8f6] shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-zinc-900/5 md:grid-cols-[0.92fr_1.08fr]">
+          <div className="relative min-h-64 overflow-hidden bg-zinc-200 md:min-h-full">
             <Image
-              className="p-4 rounded-4xl"
+              className="object-cover transition-transform duration-500 group-hover:scale-105"
               placeholder="blur"
-              blurDataURL={cases.pationImg.blurDataURL}
-              src={cases.pationImg.src}
+              src={cases.pationImg}
               alt={cases.alt}
-              width={350}
-              height={200}
+              fill
+              sizes="(min-width: 768px) 24rem, 100vw"
             />
-            <h1 className="px-3 text-lg md:text-2xl">{cases.title}</h1>
-            <p className="px-3 text-sm mt-3 text-zinc-500 line-clamp-2">
-              {cases.describtion}
-            </p>
-            <Link
-              href="/gallery"
-              className="flex items-center justify-center bg-zinc-900 text-center text-zinc-200 hover:bg-zinc-800 mt-5 rounded-b-lg py-3 transition-all duration-300"
-            >
-              View more
+          </div>
+          <div className="flex flex-col p-7 sm:p-9">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-800">Case study 01</p>
+            <h3 className="mt-4 font-serif text-2xl leading-tight text-zinc-900 sm:text-3xl">{cases.title}</h3>
+            <p className="mt-4 text-sm leading-6 text-zinc-600 sm:text-base">{cases.describtion}</p>
+            <Link href="/gallery/caseone" className="mt-7 inline-flex w-fit items-center gap-2 text-sm font-semibold text-zinc-900 transition-colors hover:text-emerald-800">
+              Explore the case <ArrowUpRight aria-hidden="true" className="size-4" />
             </Link>
           </div>
-        </div>
+        </article>
       ))}
     </motion.div>
   );
