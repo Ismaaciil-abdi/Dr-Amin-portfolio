@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDown, ArrowUpRight, Download, Sparkles } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Download } from "lucide-react";
 import { motion } from "framer-motion";
 import drAminImage from "@/assets/dr-amin.jpeg";
 
@@ -10,6 +10,14 @@ const riseIn = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0 },
 };
+
+function ToothIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M7.2 3.8c1.5 0 2.5.8 4.8.8s3.3-.8 4.8-.8c2.5 0 4.2 2.1 3.5 5.2l-1.8 8.1c-.4 1.9-1.5 3.1-2.7 3.1-1.3 0-1.5-1.7-2-3.5-.4-1.4-.8-2.1-1.8-2.1s-1.4.7-1.8 2.1c-.5 1.8-.7 3.5-2 3.5-1.2 0-2.3-1.2-2.7-3.1L3.7 9C3 5.9 4.7 3.8 7.2 3.8Z" />
+    </svg>
+  );
+}
 
 export default function Hero() {
   return (
@@ -23,7 +31,7 @@ export default function Hero() {
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
           <div className="relative z-10 order-2 text-center lg:order-1 lg:text-left">
             <motion.div initial="hidden" animate="visible" transition={{ duration: 0.55 }} variants={riseIn} className="inline-flex items-center gap-2 rounded-full border border-zinc-300 bg-white/70 px-3.5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-zinc-600 shadow-sm backdrop-blur">
-              <Sparkles aria-hidden="true" className="size-3.5 text-emerald-700" />
+              <ToothIcon className="size-3.5 text-emerald-700" />
               Evidence-led dental care
             </motion.div>
 
@@ -35,7 +43,7 @@ export default function Hero() {
               Dr. Amin Abdi Ismail is building a practice rooted in science, careful listening, and the confidence that comes from making each clinical decision count.
             </motion.p>
 
-            <motion.div initial="hidden" animate="visible" transition={{ duration: 0.65, delay: 0.3 }} variants={riseIn} className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:items-start">
+            <motion.div initial="hidden" animate="visible" transition={{ duration: 0.65, delay: 0.3 }} variants={riseIn} className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row lg:justify-start">
               <Link href="/contact" className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-zinc-900 px-5 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-emerald-900 hover:shadow-lg hover:shadow-zinc-900/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2">
                 Let&apos;s connect <ArrowUpRight aria-hidden="true" className="size-4" />
               </Link>
@@ -54,19 +62,17 @@ export default function Hero() {
             <div className="absolute -inset-3 rounded-[2rem] border border-zinc-300/70" />
             <div className="relative aspect-[4/5] overflow-hidden rounded-[1.7rem] bg-zinc-200 shadow-2xl shadow-zinc-900/10">
               <Image src={drAminImage} alt="Dr. Amin Abdi Ismail" placeholder="blur" fill priority sizes="(min-width: 1024px) 42vw, (min-width: 640px) 28rem, calc(100vw - 3rem)" className="object-cover" />
-              <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-zinc-950/60 to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-white">
-                <div>
-                  <p className="text-xs uppercase tracking-[0.18em] text-white/70">Dr. Amin Abdi Ismail</p>
-                  <p className="mt-1 font-serif text-xl">General Dentist</p>
-                </div>
-                <span className="flex size-9 items-center justify-center rounded-full border border-white/30 bg-white/10 backdrop-blur"><Sparkles aria-hidden="true" className="size-4" /></span>
-              </div>
             </div>
 
-            <div className="absolute -bottom-7 -left-4 rounded-2xl border border-zinc-200 bg-white/95 p-3.5 shadow-xl shadow-zinc-900/10 backdrop-blur sm:-left-8 sm:p-4">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-zinc-500">Care philosophy</p>
-              <p className="mt-1 max-w-36 font-serif text-sm leading-5 text-zinc-800 sm:max-w-44 sm:text-base">Science, skill &amp; empathy.</p>
+            <div className="mt-5 flex items-end justify-between gap-4 px-1">
+              <div>
+                <p className="text-xs uppercase tracking-[0.18em] text-zinc-500">Dr. Amin Abdi Ismail</p>
+                <p className="mt-1 font-serif text-xl text-zinc-900">General Dentist</p>
+              </div>
+              <div className="rounded-2xl border border-zinc-200 bg-white/95 p-3.5 shadow-xl shadow-zinc-900/10 backdrop-blur sm:p-4">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-zinc-500">Care philosophy</p>
+                <p className="mt-1 max-w-36 font-serif text-sm leading-5 text-zinc-800 sm:max-w-44 sm:text-base">Science, skill &amp; empathy.</p>
+              </div>
             </div>
           </motion.div>
         </div>
