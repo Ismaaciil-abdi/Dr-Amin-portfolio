@@ -1,99 +1,80 @@
-import Image from "next/image";
-import case1Xray from "@/assets/showcase/case1xray.jpeg";
-import case1Bf from "@/assets/showcase/case1bf_1.jpeg";
-import case1Af from "@/assets/showcase/case1af.jpeg";
-import conc1 from "@/assets/showcase/conc1.jpeg";
-import conc2 from "@/assets/showcase/conc2.jpeg";
+import CaseStudyPage, {
+  type CaseStudy,
+} from "@/app/gallery/_components/CaseStudyPage";
+import case1Xray from "@/assets/xray1.jpg";
+import case1Before from "@/assets/case1before.jpg";
+import midtreatment from "@/assets/midtreatment.jpg";
+import conclusionOne from "@/assets/xray2.jpg";
+import finall from "@/assets/fullteeth.jpg";
+
+// Keep each case's content and image captions together here. New case routes
+// can reuse the shared CaseStudyPage component with the same data shape.
+const study: CaseStudy = {
+  number: "01",
+  title: "Management of fractured right central in pediatric patient",
+  category: "Fractured tooth management",
+  introduction:
+    "A 11 year boy presented with a fractured right central incisor after he have been knocked down by another boy to the ground, fracturing the tooth in the middle third.",
+  sections: [
+    {
+      title: "Patient",
+      content: "Male, 11 years old, medically fit.",
+    },
+    {
+      title: "History and concerns",
+      content:
+        "After examining the soft and hard tissue the following were noticed, Minor injuries to the lips. The tooth was non vital upon pupil testing.",
+    },
+    // {
+    //   title: "Clinical findings",
+    //   content: [
+    //     "UR3, UR2, and UR1 were severely decayed and planned as bridge abutments.",
+    //     "UR1 required a direct composite restoration.",
+    //     "UL1 was intact and required a Class III composite restoration.",
+    //   ],
+    // },
+    {
+      title: "Treatment plan",
+      content:
+        "The patient's parents were keen on saving the tooth so we proposed Root Canal Treatment and restoration of the tooth with Composite, they agreed with the treatment option and gave consent.",
+    },
+    {
+      title: "Treatment phases",
+      content: [
+        "Restoration options were limited to composite filling due to the age of the patient, however a more long term restoration will be performed when the patient reaches appropriate age for it.",
+        "Root canal treatment was performed utilizing rotary motor and files different tapers, furthermore the obturation was done utilizing cold lateral compaction and resin sealer.",
+      ],
+    },
+  ],
+  images: [
+    {
+      src: case1Before,
+      alt: "Anterior teeth before bridge rehabilitation",
+      caption: "Initial presentation",
+    },
+    {
+      src: case1Xray,
+      alt: "Dental radiograph from the case",
+      caption: "Radiographic assessment",
+    },
+    {
+      src: midtreatment,
+      alt: "Anterior teeth during treatment",
+      caption: "Mid-treatment view",
+    },
+    {
+      src: conclusionOne,
+      alt: "Close-up view of the completed restoration",
+      caption: "Restoration detail",
+    },
+    {
+      src: finall,
+      alt: "Additional view of the completed restoration",
+      caption: "Final result",
+    },
+  ],
+};
 
 export default function CaseOne() {
-  return (
-    <main className="container pt-32 mb-16 max-w-3xl mx-auto">
-      <div className="px-4 md:px-8">
-        <div className="flex flex-col items-center justify-center md:flex-row gap-3 md:gap-0 md:justify-evenly">
-          <Image
-            placeholder="blur"
-            blurDataURL={case1Bf.blurDataURL}
-            src={case1Bf.src}
-            alt="case one before"
-            width={350}
-            height={350}
-            className="rounded-lg shadow-md"
-          />
-          <Image
-            placeholder="blur"
-            blurDataURL={case1Xray.blurDataURL}
-            src={case1Xray.src}
-            alt="case one before"
-            width={300}
-            height={200}
-            className="rounded-lg shadow-md"
-          />
-        </div>
-        <h1 className="mt-12  mb-12 text-2xl font-bold">Case Summary</h1>
-        <h3 className="text-lg font-semibold">Patient</h3>
-        <p>Female, mid-40s, medically fit</p>
-        <h3 className="mt-3 mb-1.5 text-lg font-semibold">Chief Complaint</h3>
-        <p>
-          Dislodged upper anterior PFM bridge; desires a more natural-looking,
-          aesthetic replacement
-        </p>
-        <h1 className="mt-3 mb-1.5 text-lg font-semibold">Involved Teeth:</h1>
-        <ul className="list-disc pl-5">
-          <li>UR3, UR2, UR1: Severely decayed planned as bridge abutments</li>
-          <li>UR1: Requires only a direct composite restoration</li>
-          <li>UL1: Intact; requires a Class III composite restoration</li>
-        </ul>
-        <h3 className="mt-3 mb-1.5 text-lg font-semibold">History</h3>
-        <p>
-          Previous PFM bridge UR3–UL1 functioned for 5 years. Patient is
-          dissatisfied with its aesthetics and longevity
-        </p>
-        <h3 className="mt-3 mb-1.5 text-lg font-semibold">Goal</h3>
-        <p>Fabrication of a high-aesthetic, metal-free fixed prosthesis </p>
-        <h3 className="mt-3 mb-1.5 text-lg font-semibold">
-          Proposed Treatment Plan
-        </h3>
-        <ul className="list-disc pl-5">
-          <li>Caries removal on UR3, UR2, and UR1</li>
-          <li>
-            Root canal treatment and fiber post-core build-ups on UR3, UR2, UR1
-            adequate ferrule achieved
-          </li>
-          <li>Direct composite restoration on UR1</li>
-          <li>Class III composite restoration on UL1</li>
-          <li>Fabrication of a full-ceramic bridge UR3 UR1</li>
-          <li>shade matching and occlusal adjustment</li>
-        </ul>
-        <div className="flex flex-wrap justify-center md:flex-row  gap-3 mt-12">
-          <Image
-            placeholder="blur"
-            blurDataURL={case1Af.blurDataURL}
-            src={case1Af.src}
-            alt="case one after"
-            width={300}
-            height={300}
-            className="rounded-lg shadow-md"
-          />
-          <Image
-            placeholder="blur"
-            blurDataURL={conc1.blurDataURL}
-            src={conc1.src}
-            alt="case one after"
-            width={300}
-            height={300}
-            className="rounded-lg shadow-md"
-          />
-          <Image
-            placeholder="blur"
-            blurDataURL={conc2.blurDataURL}
-            src={conc2.src}
-            alt="case one after"
-            width={300}
-            height={300}
-            className="rounded-lg shadow-md"
-          />
-        </div>
-      </div>
-    </main>
-  );
+  return <CaseStudyPage study={study} />;
 }

@@ -39,7 +39,7 @@ body {
   @apply font-sans;
 }
 h1, h2, h3 {
-  @apply text-zinc-800;
+  @apply text-zinc-400;
 }
 
 @theme inline {

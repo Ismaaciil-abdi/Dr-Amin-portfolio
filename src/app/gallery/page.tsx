@@ -4,7 +4,7 @@ import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Stethoscope } from "lucide-react";
 import { motion } from "framer-motion";
-import case1Before from "@/assets/showcase/case1bf_1.jpeg";
+import case1Before from "@/assets/case1before.jpg";
 
 type CaseStudy = {
   id: string;
@@ -22,12 +22,13 @@ const caseStudies: CaseStudy[] = [
   {
     id: "upper-anterior-bridge",
     number: "01",
-    title: "Dislodged upper anterior PFM bridge",
+    title: "Management of fractured right central in pediatric patient",
     summary:
-      "A restorative case focused on rebuilding function and creating a more natural-looking, aesthetic replacement.",
+      "A 11 year boy presented with a fractured right central incisor after he have been knocked down by another boy to the ground, fracturing the tooth in the middle third.",
     category: "Restorative dentistry",
     image: case1Before,
-    imageAlt: "Before treatment: dislodged upper anterior PFM bridge",
+    imageAlt:
+      "Before treatment: Fractured right central incisor in pediatric patient",
     href: "/gallery/caseone",
   },
 ];
@@ -46,14 +47,29 @@ export default function Gallery() {
           className="relative mx-auto max-w-6xl px-6 sm:px-8"
         >
           <div className="max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-800">Clinical portfolio</p>
-            <h1 className="mt-4 font-serif text-4xl leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">Every case is a chance to listen, learn, and restore confidence.</h1>
-            <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">A growing collection of clinical case studies, documenting the considered approach behind each treatment plan.</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-800">
+              Clinical portfolio
+            </p>
+            <h1 className="mt-4 font-serif text-4xl leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
+              Every case is a chance to listen, learn, and restore confidence.
+            </h1>
+            <p className="mt-6 max-w-2xl text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
+              A growing collection of clinical case studies, documenting the
+              considered approach behind each treatment plan.
+            </p>
           </div>
 
           <div className="mt-10 inline-flex items-center gap-3 rounded-full border border-zinc-200 bg-[#f8f8f6] px-4 py-2.5 text-sm text-zinc-600">
-            <Stethoscope aria-hidden="true" className="size-4 text-emerald-800" />
-            <span><strong className="font-semibold text-zinc-900">{caseStudies.length}</strong> case {caseStudies.length === 1 ? "study" : "studies"} published</span>
+            <Stethoscope
+              aria-hidden="true"
+              className="size-4 text-emerald-800"
+            />
+            <span>
+              <strong className="font-semibold text-zinc-900">
+                {caseStudies.length}
+              </strong>{" "}
+              case {caseStudies.length === 1 ? "study" : "studies"} published
+            </span>
           </div>
         </motion.div>
       </section>
@@ -62,10 +78,17 @@ export default function Gallery() {
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
           <div className="flex items-end justify-between gap-6">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-800">Case studies</p>
-              <h2 className="mt-3 font-serif text-3xl tracking-tight text-zinc-900 sm:text-4xl">The work, in detail.</h2>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-800">
+                Case studies
+              </p>
+              <h2 className="mt-3 font-serif text-3xl tracking-tight text-zinc-900 sm:text-4xl">
+                The work, in detail.
+              </h2>
             </div>
-            <p className="hidden max-w-xs text-right text-sm leading-6 text-zinc-500 sm:block">Each case reflects a commitment to careful planning and patient-centred care.</p>
+            <p className="hidden max-w-xs text-right text-sm leading-6 text-zinc-500 sm:block">
+              Each case reflects a commitment to careful planning and
+              patient-centred care.
+            </p>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -78,16 +101,38 @@ export default function Gallery() {
                 transition={{ duration: 0.45, delay: index * 0.08 }}
                 className="group overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-white transition-shadow duration-300 hover:shadow-xl hover:shadow-zinc-900/5"
               >
-                <Link href={caseStudy.href} className="block" aria-label={`Read ${caseStudy.title}`}>
+                <Link
+                  href={caseStudy.href}
+                  className="block"
+                  aria-label={`Read ${caseStudy.title}`}
+                >
                   <div className="relative aspect-[4/3] overflow-hidden bg-zinc-200">
-                    <Image src={caseStudy.image} alt={caseStudy.imageAlt} placeholder="blur" fill sizes="(min-width: 1280px) 22rem, (min-width: 768px) 45vw, calc(100vw - 3rem)" className="object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-zinc-800 backdrop-blur">Case {caseStudy.number}</span>
+                    <Image
+                      src={caseStudy.image}
+                      alt={caseStudy.imageAlt}
+                      placeholder="blur"
+                      fill
+                      sizes="(min-width: 1280px) 22rem, (min-width: 768px) 45vw, calc(100vw - 3rem)"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1.5 text-xs font-semibold text-zinc-800 backdrop-blur">
+                      Case {caseStudy.number}
+                    </span>
                   </div>
                   <div className="p-6 sm:p-7">
-                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-emerald-800">{caseStudy.category}</p>
-                    <h3 className="mt-3 font-serif text-2xl leading-tight text-zinc-900">{caseStudy.title}</h3>
-                    <p className="mt-4 text-sm leading-6 text-zinc-600">{caseStudy.summary}</p>
-                    <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-zinc-900 transition-colors group-hover:text-emerald-800">Explore the case <ArrowUpRight aria-hidden="true" className="size-4" /></span>
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-emerald-800">
+                      {caseStudy.category}
+                    </p>
+                    <h3 className="mt-3 font-serif text-2xl leading-tight text-zinc-900">
+                      {caseStudy.title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-6 text-zinc-600">
+                      {caseStudy.summary}
+                    </p>
+                    <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-zinc-900 transition-colors group-hover:text-emerald-800">
+                      Explore the case{" "}
+                      <ArrowUpRight aria-hidden="true" className="size-4" />
+                    </span>
                   </div>
                 </Link>
               </motion.article>
