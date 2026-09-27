@@ -23,7 +23,7 @@ const study: CaseStudy = {
     {
       title: "History and concerns",
       content:
-        "After examining the soft and hard tissue the following were noticed, Minor injuries to the lips. The tooth was non vital upon pupil testing.",
+        "After examining the soft and hard tissue the following were noticed, Minor injuries to the lips. The tooth was non vital upon Pulp testing.",
     },
     // {
     //   title: "Clinical findings",
@@ -57,15 +57,16 @@ const study: CaseStudy = {
       alt: "Dental radiograph from the case",
       caption: "Radiographic assessment",
     },
-    {
-      src: midtreatment,
-      alt: "Anterior teeth during treatment",
-      caption: "Mid-treatment view",
-    },
+
     {
       src: conclusionOne,
       alt: "Close-up view of the completed restoration",
       caption: "Restoration detail",
+    },
+    {
+      src: midtreatment,
+      alt: "Anterior teeth during treatment",
+      caption: "Mid-treatment view",
     },
     {
       src: finall,

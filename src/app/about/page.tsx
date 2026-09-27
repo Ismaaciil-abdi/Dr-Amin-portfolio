@@ -177,7 +177,7 @@ export default function About() {
                 </h3>
               </div>
               <span className="inline-flex w-fit rounded-full border border-zinc-200 px-3 py-1.5 text-xs font-semibold text-zinc-600">
-                Borama &amp; Qardho
+                Borama, Qardho &amp; Garowe
               </span>
             </div>
             <div className="mt-7 grid gap-4 md:grid-cols-3">
