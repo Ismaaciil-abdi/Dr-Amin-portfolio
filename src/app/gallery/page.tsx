@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowUpRight, Stethoscope } from "lucide-react";
 import { motion } from "framer-motion";
 import case1Before from "@/assets/case1before.jpg";
+import case2Before from "@/assets/case_two/case_02_Before.jpg"
 
 type CaseStudy = {
   id: string;
@@ -31,6 +32,18 @@ const caseStudies: CaseStudy[] = [
       "Before treatment: Fractured right central incisor in pediatric patient",
     href: "/gallery/caseone",
   },
+  {
+    id: "lower-posterior-bridge",
+    number: "02",
+    title: "Restoring a first premolar with a challenging deep marginal elevation",
+    summary:
+      "A 16-year-old female pateint, medically fit, presented to the clinic with a diastema and slight calculus on her lower incisors, which we addressed first.",
+    category: "Restorative dentistry",
+    image: case2Before,
+    imageAlt:
+      "Before treatment: Restoring a first premolar with a challenging deep marginal elevation",
+    href: "/gallery/casetwo",
+  }
 ];
 
 export default function Gallery() {
