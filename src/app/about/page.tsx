@@ -215,10 +215,14 @@ export default function About() {
             <div className="mt-7 grid gap-6 md:grid-cols-3">
               {experience.map((entry) => (
                 <section key={entry.place}>
-                  <h4 className="font-serif text-lg text-zinc-900">{entry.place}</h4>
+                  <h4 className="font-serif text-lg text-zinc-900">
+                    {entry.place}
+                  </h4>
                   <ol className="mt-3 list-decimal space-y-2 border-l border-emerald-700 pl-8 text-sm leading-6 text-zinc-600">
                     {entry.items.map((item) => (
-                      <li key={item} className="pl-1">{item}</li>
+                      <li key={item} className="pl-1">
+                        {item}
+                      </li>
                     ))}
                   </ol>
                 </section>
@@ -229,27 +233,33 @@ export default function About() {
       </section>
 
       <section className="border-y border-zinc-200 bg-[#f8f8f6] py-20 sm:py-28">
-        {/* Skills kuso dar bari */}
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
-          <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-800">
-              My skills
-            </p>
-            <h2 className="mt-3 font-serif text-3xl tracking-tight text-zinc-900 sm:text-4xl">
-              Skills and strengths that define my practice.
-            </h2>
-          </div>
-
-          <div className="mt-7 grid gap-4 md:grid-cols-3">
-            {skills.map((skill, index) => (
-              <p
-                key={index}
-                className="border-l border-emerald-700 pl-4 text-sm leading-6 text-zinc-600"
-              >
-                {skill}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mx-auto max-w-5xl rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8"
+          >
+            <div className="mx-auto max-w-2xl text-center">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-800">
+                My skills
               </p>
-            ))}
-          </div>
+              <h2 className="mt-3 font-serif text-3xl tracking-tight text-zinc-900 sm:text-4xl">
+                Skills and strengths that define my practice.
+              </h2>
+            </div>
+
+            <div className="mt-7 grid gap-4 md:grid-cols-3">
+              {skills.map((skill, index) => (
+                <div
+                  key={index}
+                  className="flex min-h-16 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 px-4 text-center text-sm font-medium leading-6 text-zinc-700 shadow-sm shadow-zinc-900/5"
+                >
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 
