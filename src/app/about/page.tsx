@@ -28,9 +28,41 @@ const education = [
 ];
 
 const experience = [
-  "Assisted with patient examinations, diagnosis, and treatment planning at Amoud Dental Lab in Borama, Awdal.",
-  "Built practical experience in dental hygiene, patient education, and preventive care.",
-  "Worked for six months as a general dentist in a private clinic in Qardho, independently managing restorative, periodontal, endodontic, oral surgery, and minor orthodontic treatment.",
+  {
+    place: "Borama",
+    items: [
+      "Assisted with patient examinations, diagnosis, and treatment planning at Amoud Dental Lab in Borama, Awdal.",
+      "Built practical experience in dental hygiene, patient education, and preventive care.",
+    ],
+  },
+  {
+    place: "Qardho",
+    items: [
+      "Worked for six months as a general dentist in a private clinic.",
+      "Managed restorative treatment.",
+      "Managed periodontal treatment.",
+      "Managed endodontic treatment.",
+      "Performed oral surgery.",
+      "Provided minor orthodontic treatment.",
+    ],
+  },
+  {
+    place: "Garowe",
+    items: [
+      "Oral surgery — tooth extractions",
+      "Restorative dentistry — direct and indirect restorations",
+      "Prosthodontics — fixed (crowns and bridges) and removable prostheses",
+      "Endodontics — root canal treatments and re-treatments",
+      "Orthodontics — treatment of a variety of cases",
+    ],
+  },
+];
+const skills = [
+  "Strong communication and interpersonal skills",
+  "Understanding of patient management and treatment planning.",
+  "Knowledgeable in operative and Endodontics.",
+  "Strong and foundational knowledge in orthodontics",
+  "Efficient in crowns and bridges.",
 ];
 
 export default function About() {
@@ -180,17 +212,44 @@ export default function About() {
                 Borama, Qardho &amp; Garowe
               </span>
             </div>
-            <div className="mt-7 grid gap-4 md:grid-cols-3">
-              {experience.map((item) => (
-                <p
-                  key={item}
-                  className="border-l border-emerald-700 pl-4 text-sm leading-6 text-zinc-600"
-                >
-                  {item}
-                </p>
+            <div className="mt-7 grid gap-6 md:grid-cols-3">
+              {experience.map((entry) => (
+                <section key={entry.place}>
+                  <h4 className="font-serif text-lg text-zinc-900">{entry.place}</h4>
+                  <ol className="mt-3 list-decimal space-y-2 border-l border-emerald-700 pl-8 text-sm leading-6 text-zinc-600">
+                    {entry.items.map((item) => (
+                      <li key={item} className="pl-1">{item}</li>
+                    ))}
+                  </ol>
+                </section>
               ))}
             </div>
           </motion.article>
+        </div>
+      </section>
+
+      <section className="border-y border-zinc-200 bg-[#f8f8f6] py-20 sm:py-28">
+        {/* Skills kuso dar bari */}
+        <div className="mx-auto max-w-6xl px-6 sm:px-8">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-800">
+              My skills
+            </p>
+            <h2 className="mt-3 font-serif text-3xl tracking-tight text-zinc-900 sm:text-4xl">
+              Skills and strengths that define my practice.
+            </h2>
+          </div>
+
+          <div className="mt-7 grid gap-4 md:grid-cols-3">
+            {skills.map((skill, index) => (
+              <p
+                key={index}
+                className="border-l border-emerald-700 pl-4 text-sm leading-6 text-zinc-600"
+              >
+                {skill}
+              </p>
+            ))}
+          </div>
         </div>
       </section>
 
