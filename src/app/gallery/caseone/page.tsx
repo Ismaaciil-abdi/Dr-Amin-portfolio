@@ -7,8 +7,6 @@ import midtreatment from "@/assets/midtreatment.jpg";
 import conclusionOne from "@/assets/xray2.jpg";
 import finall from "@/assets/fullteeth.jpg";
 
-// Keep each case's content and image captions together here. New case routes
-// can reuse the shared CaseStudyPage component with the same data shape.
 const study: CaseStudy = {
   number: "01",
   title: "Management of fractured right central in pediatric patient",
@@ -25,14 +23,6 @@ const study: CaseStudy = {
       content:
         "After examining the soft and hard tissue the following were noticed, Minor injuries to the lips. The tooth was non vital upon Pulp testing.",
     },
-    // {
-    //   title: "Clinical findings",
-    //   content: [
-    //     "UR3, UR2, and UR1 were severely decayed and planned as bridge abutments.",
-    //     "UR1 required a direct composite restoration.",
-    //     "UL1 was intact and required a Class III composite restoration.",
-    //   ],
-    // },
     {
       title: "Treatment plan",
       content:
@@ -55,13 +45,13 @@ const study: CaseStudy = {
     {
       src: case1Xray,
       alt: "Dental radiograph from the case",
-      caption: "Radiographic assessment",
+      caption: "Working length determination.",
     },
 
     {
       src: conclusionOne,
       alt: "Close-up view of the completed restoration",
-      caption: "Restoration detail",
+      caption: "Oburation.",
     },
     {
       src: midtreatment,

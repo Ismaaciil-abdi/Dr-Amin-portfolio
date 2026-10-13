@@ -8,8 +8,6 @@ import case2third from "@/assets/case_two/case_02_thrid.jpg";
 import case2After from "@/assets/case_two/case_02_After.jpg";
 import case2xray from "@/assets/case_two/case_02_xray.jpg";
 
-// Keep each case's content and image captions together here. New case routes
-// can reuse the shared CaseStudyPage component with the same data shape.
 const study: CaseStudy = {
   number: "02",
   title:
@@ -25,7 +23,7 @@ const study: CaseStudy = {
     {
       title: "History and concerns",
       content:
-        "Before proceeding with the orthodontic treatment, we discoverd a severely decayed upper first premolar. After assessing the remaining tooth structure, the tooth was considered restorable.",
+        "The patient presented to the clinic with a diastema and slight calculus on her lower incisors, which we addressed first. Before proceeding with the orthodontic treatment, we discoverd a severely decayed upper first premolar. After assessing the remaining tooth structure, the tooth was considered restorable.",
     },
     {
       title: "Pre operative assessment",
@@ -44,7 +42,7 @@ const study: CaseStudy = {
     {
       title: "Pre endodontic build up (DME)",
       content:
-        "Before initiating root canal treatment, a build-up was required to help maintain isolation and keep the irrigants within the tooth, among other benefits.",
+        "The patient presented to the clinic with a diastema and slight calculus on her lower incisors, which we addressed first. Before initiating root canal treatment, a build-up was required to help maintain isolation and keep the irrigants within the tooth, among other benefits.",
     },
     {
       title: "Deep Marginal Elevation",
@@ -75,14 +73,8 @@ const study: CaseStudy = {
     {
       src: case2second,
       alt: "Dental radiograph from the case",
-      caption: "Radiographic assessment",
+      caption: "Matrix implacement and deep marginal elevation",
     },
-
-    // {
-    //   src: conclusionOne,
-    //   alt: "Close-up view of the completed restoration",
-    //   caption: "Restoration detail",
-    // },
     {
       src: case2third,
       alt: "Another view of the treatment process",

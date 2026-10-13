@@ -5,7 +5,10 @@ import Link from "next/link";
 import { ArrowUpRight, Stethoscope } from "lucide-react";
 import { motion } from "framer-motion";
 import case1Before from "@/assets/case1before.jpg";
-import case2Before from "@/assets/case_two/case_02_Before.jpg"
+import case2Before from "@/assets/case_two/case_02_Before.jpg";
+import rootCanalImage from "@/../public/img/converted/root_canel_treatments/IMG_0154.jpg";
+import prosthodonticsImage from "@/../public/img/converted/prosthodontics/random_03.jpg";
+import operativeImage from "@/../public/img/converted/operative/op_07F.jpg";
 
 type CaseStudy = {
   id: string;
@@ -18,7 +21,6 @@ type CaseStudy = {
   href: string;
 };
 
-// Add future cases here; the gallery will automatically render a new card.
 const caseStudies: CaseStudy[] = [
   {
     id: "upper-anterior-bridge",
@@ -35,7 +37,8 @@ const caseStudies: CaseStudy[] = [
   {
     id: "lower-posterior-bridge",
     number: "02",
-    title: "Restoring a first premolar with a challenging deep marginal elevation",
+    title:
+      "Restoring a first premolar with a challenging deep marginal elevation",
     summary:
       "A 16-year-old female pateint, medically fit, presented to the clinic with a diastema and slight calculus on her lower incisors, which we addressed first.",
     category: "Restorative dentistry",
@@ -43,7 +46,28 @@ const caseStudies: CaseStudy[] = [
     imageAlt:
       "Before treatment: Restoring a first premolar with a challenging deep marginal elevation",
     href: "/gallery/casetwo",
-  }
+  },
+];
+
+const collections = [
+  {
+    title: "Root canal treatments",
+    image: rootCanalImage,
+    alt: "Dental X-ray taken during root canal treatment",
+    href: "/gallery/collections/root-canal",
+  },
+  {
+    title: "Prosthodontics",
+    image: prosthodonticsImage,
+    alt: "Prosthodontic dental treatment",
+    href: "/gallery/collections/prosthodontics",
+  },
+  {
+    title: "Operative",
+    image: operativeImage,
+    alt: "Operative dental treatment",
+    href: "/gallery/collections/operative",
+  },
 ];
 
 export default function Gallery() {
@@ -149,6 +173,55 @@ export default function Gallery() {
                   </div>
                 </Link>
               </motion.article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="bg-white py-14 sm:py-20"
+        aria-labelledby="collections-heading"
+      >
+        <div className="mx-auto max-w-6xl px-6 sm:px-8">
+          <div className="mb-7 flex items-end justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-800">
+                Browse by specialty
+              </p>
+              <h2
+                id="collections-heading"
+                className="mt-2 font-serif text-3xl tracking-tight text-zinc-900 sm:text-4xl"
+              >
+                Collections
+              </h2>
+            </div>
+            <Link
+              href="/gallery"
+              className="hidden text-sm font-semibold text-zinc-600 hover:text-emerald-800 sm:inline-flex"
+            >
+              View all cases
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+            {collections.map((collection) => (
+              <Link
+                key={collection.title}
+                href={collection.href}
+                className="group relative aspect-[1.12] overflow-hidden rounded-2xl bg-zinc-200 shadow-sm sm:aspect-[1.08] sm:rounded-[1.5rem]"
+              >
+                <Image
+                  src={collection.image}
+                  alt={collection.alt}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+                <span className="absolute inset-x-3 bottom-3 text-base font-medium leading-tight text-white drop-shadow sm:inset-x-5 sm:bottom-5 sm:text-xl">
+                  {collection.title}
+                </span>
+              </Link>
             ))}
           </div>
         </div>
