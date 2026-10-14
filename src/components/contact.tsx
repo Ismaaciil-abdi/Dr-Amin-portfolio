@@ -20,7 +20,7 @@ function ContactForm() {
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-800">
           Send a note
         </p>
-        <h2 className="mt-2 font-serif text-2xl text-zinc-50 dark:text-zinc-200">
+        <h2 className="mt-2 font-serif text-2xl text-zinc-800 dark:text-zinc-200">
           How can I help?
         </h2>
       </div>
