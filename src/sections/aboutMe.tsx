@@ -65,30 +65,32 @@ export default function AboutMe() {
               The person behind the practice
             </p>
             <h2 className="mt-4 max-w-2xl font-serif text-3xl leading-tight tracking-tight text-zinc-900 sm:text-4xl">
-              Careful dentistry starts with a patient-first mindset.
+              A dentist shaped by broad clinical experience and patient care.
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-base leading-7 text-zinc-600 lg:mx-0">
-              I&apos;m Dr. Amin Abdi Ismail, a newly qualified general dentist
-              committed to delivering high-quality, evidence-based care.
-              I&apos;m continually learning, refining my clinical skills, and
-              building a strong foundation in everyday dentistry.
+              I&apos;m Dr. Amin Abdi Ismail, a general dentist and Bachelor of
+              Dental Surgery graduate of Amoud University. My training and
+              clinical work have given me experience across restorative care,
+              endodontics, oral surgery, prosthodontics, and orthodontics. I
+              aim to make each treatment clear, considered, and responsive to
+              the individual patient.
             </p>
 
             <div className="mt-8 grid gap-3 text-left sm:grid-cols-2">
               <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">
-                  Approach
+                  Education
                 </p>
                 <p className="mt-2 font-serif text-lg text-zinc-800">
-                  Evidence before assumption.
+                  BDS, Amoud University · 2019–2024
                 </p>
               </div>
               <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">
-                  Focus
+                  Clinical experience
                 </p>
                 <p className="mt-2 font-serif text-lg text-zinc-800">
-                  Everyday care, done well.
+                  Qardho and Garowe · General dentistry
                 </p>
               </div>
             </div>

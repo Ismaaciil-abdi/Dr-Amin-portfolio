@@ -80,33 +80,37 @@ export default function About() {
             className="order-2 lg:order-1"
           >
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-800">
-              About Dr. Amin
+              General Dentist · Borama, Somaliland
             </p>
             <h1 className="mt-4 max-w-xl font-serif text-4xl leading-[1.1] tracking-tight text-zinc-900 sm:text-5xl">
-              A thoughtful start to a lifelong practice.
+              Dr. Amin Abdi Ismail
             </h1>
+            <p className="mt-3 text-sm font-medium tracking-wide text-zinc-500">
+              Bachelor of Dental Surgery · Amoud University, 2019–2024
+            </p>
             <p className="mt-6 max-w-xl text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
-              I&apos;m Dr. Amin Abdi Ismail, a general dentist from Borama,
-              Somaliland. I care about making every visit feel clear, calm, and
-              centred on what each patient needs.
+              I&apos;m a general dentist trained at Amoud University, with
+              clinical experience in Borama, Qardho, and Garowe. My work spans
+              restorative dentistry, endodontics, prosthodontics, oral surgery,
+              and orthodontics.
             </p>
             <p className="mt-4 max-w-xl text-base leading-7 text-zinc-600">
-              As a newly qualified clinician, I&apos;m focused on building
-              strong everyday habits: listening carefully, working from
-              evidence, and continuing to learn with every case.
+              I focus on clear communication, thoughtful treatment planning,
+              and helping patients feel informed and comfortable throughout
+              their care.
             </p>
 
             <div className="mt-8 grid max-w-xl gap-3 sm:grid-cols-2">
               <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
-                <MapPin
+                <GraduationCap
                   aria-hidden="true"
                   className="size-4 text-emerald-800"
                 />
                 <p className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">
-                  Based in
+                  Education
                 </p>
                 <p className="mt-1 font-serif text-lg text-zinc-800">
-                  Borama, Somaliland
+                  BDS, Amoud University
                 </p>
               </div>
               <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
@@ -115,10 +119,10 @@ export default function About() {
                   className="size-4 text-emerald-800"
                 />
                 <p className="mt-3 text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">
-                  Practice focus
+                  Clinical practice
                 </p>
                 <p className="mt-1 font-serif text-lg text-zinc-800">
-                  Patient-first care
+                  Qardho · 2024 &nbsp;|&nbsp; Garowe · 2025–2026
                 </p>
               </div>
             </div>
@@ -144,7 +148,7 @@ export default function About() {
             </div>
             <div className="absolute -bottom-5 -left-4 rounded-2xl border border-zinc-200 bg-[#f8f8f6] px-4 py-3 shadow-lg shadow-zinc-900/5 sm:-left-8">
               <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-zinc-500">
-                Dental surgeon
+                General dentist · BDS
               </p>
               <p className="mt-1 font-serif text-lg text-zinc-800">
                 Amoud University

@@ -35,6 +35,10 @@
 
 }
 
+::selection {
+  @apply bg-chart-2 text-primary-foreground;
+  
+}
 body {
   @apply font-sans;
 }
