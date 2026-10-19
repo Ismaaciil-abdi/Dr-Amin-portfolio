@@ -56,8 +56,8 @@ const prosthodontics = [
     label: "Prosthodontic case",
   },
   {
-    src: "/img/converted/operative/op_07B.jpg",
-    label: "Operative case",
+    src: "/img/converted/root_canel_treatments/IMG_0399.jpg",
+    label: "Root Canal Treatment",
   },
   {
     src: "/img/converted/prosthodontics/pro_04F.jpg",
