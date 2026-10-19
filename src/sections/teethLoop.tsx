@@ -124,13 +124,13 @@ export default function TeethLoop() {
               type="button"
               onClick={() => setSelectedImage(photo)}
               aria-label={`View ${photo.label.toLowerCase()} photo`}
-              className="group/photo relative h-36 w-52 shrink-0 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm outline-none transition duration-300 hover:-translate-y-1 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-emerald-800 sm:h-44 sm:w-64"
+              className="group/photo relative h-36 w-52 shrink-0 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm outline-none transition duration-300 hover:-translate-y-1 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-emerald-800 sm:h-44 sm:w-64 md:h-48 md:w-72 lg:h-56 lg:w-96"
             >
               <Image
                 src={photo.src}
                 alt={photo.label}
                 fill
-                sizes="(max-width: 640px) 208px, 256px"
+                sizes="(max-width: 640px) 208px, (max-width: 1024px) 288px, 384px"
                 className="object-cover transition-transform duration-500 group-hover/photo:scale-105"
               />
               <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent px-3 pb-3 pt-8 text-left text-xs font-medium text-white">
