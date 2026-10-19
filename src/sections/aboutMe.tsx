@@ -71,9 +71,9 @@ export default function AboutMe() {
               I&apos;m Dr. Amin Abdi Ismail, a general dentist and Bachelor of
               Dental Surgery graduate of Amoud University. My training and
               clinical work have given me experience across restorative care,
-              endodontics, oral surgery, prosthodontics, and orthodontics. I
-              aim to make each treatment clear, considered, and responsive to
-              the individual patient.
+              endodontics, oral surgery, prosthodontics, and orthodontics. I aim
+              to make each treatment clear, considered, and responsive to the
+              individual patient.
             </p>
 
             <div className="mt-8 grid gap-3 text-left sm:grid-cols-2">
@@ -81,8 +81,9 @@ export default function AboutMe() {
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">
                   Education
                 </p>
+                U
                 <p className="mt-2 font-serif text-lg text-zinc-800">
-                  BDS, Amoud University · 2019–2024
+                  BDS, Amoud University · 2019-2024
                 </p>
               </div>
               <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
@@ -127,7 +128,7 @@ export default function AboutMe() {
             </div>
           </motion.div>
         </div>
-
+        {/* Selected Clinical Work */}
         <div className="mt-24 border-t border-zinc-200 pt-16 sm:mt-32">
           <div className="mx-auto mb-10 max-w-2xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-800">

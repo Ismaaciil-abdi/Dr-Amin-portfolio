@@ -6,7 +6,7 @@ export default function Header() {
     <header className="fixed inset-x-0 top-3 z-[9999] flex justify-center px-3 sm:px-4">
       <nav
         aria-label="Main navigation"
-        className="flex w-full max-w-max items-center gap-0.5 rounded-full border border-zinc-200/90 bg-white/80 p-1.5 text-zinc-800 shadow-lg shadow-zinc-900/5 backdrop-blur-xl sm:gap-1 sm:p-2"
+        className="flex w-full max-w-max items-center gap-0.5 rounded-full border border-zinc-200/90 bg-white/80 p-1.5 text-zinc-800 shadow-lg shadow-zinc-900/5 backdrop-blur-xl sm:gap-1 sm:p-2 lg:gap-1.5 lg:p-2.5"
       >
         <Link href="/" className="nav-item">
           Home
