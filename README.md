@@ -27,8 +27,7 @@ examination.
 
 **Primary School**
 
-_2008 – 2013:
-SH. Hussein Abrar Primary School, Borama_
+_2008 – 2013: SH. Hussein Abraar Primary School, Boorama_
 
 Achieved grade A on Somaliland Certificate of Primary Education Examinations.
 
@@ -70,7 +69,7 @@ Achieved grade A on Somaliland Certificate of Primary Education Examinations.
 - Strong and foundational knowledge in orthodontics.
 - Efficient in crowns and bridges.
 
-## Social Media
+## SOCIAL MEDIA
 
 Don't forget I say hi,you know what I mean hit the follow button.
 
