@@ -95,9 +95,9 @@ export default function About() {
               and orthodontics.
             </p>
             <p className="mt-4 max-w-xl text-base leading-7 text-zinc-600">
-              I focus on clear communication, thoughtful treatment planning,
-              and helping patients feel informed and comfortable throughout
-              their care.
+              I focus on clear communication, thoughtful treatment planning, and
+              helping patients feel informed and comfortable throughout their
+              care.
             </p>
 
             <div className="mt-8 grid max-w-xl gap-3 sm:grid-cols-2">
@@ -201,34 +201,41 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.45, delay: 0.12 }}
-            className="mt-5 rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8"
+            className="mt-5 rounded-[1.75rem] border border-zinc-200 bg-white p-6 shadow-sm sm:p-8"
           >
             <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-start">
               <div className="max-w-2xl">
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-emerald-800">
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-800">
                   Clinical experience
                 </p>
-                <h3 className="mt-2 font-serif text-2xl text-zinc-900">
+                <h3 className="mt-2 font-serif text-2xl text-zinc-900 sm:text-3xl">
                   A hands-on foundation in general dentistry.
                 </h3>
               </div>
-              <span className="inline-flex w-fit rounded-full border border-zinc-200 px-3 py-1.5 text-xs font-semibold text-zinc-600">
+              <span className="inline-flex w-fit rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-xs font-semibold text-zinc-600">
                 Borama, Qardho &amp; Garowe
               </span>
             </div>
-            <div className="mt-7 grid gap-6 md:grid-cols-3">
+            <div className="mt-8 grid gap-4 lg:grid-cols-3">
               {experience.map((entry) => (
-                <section key={entry.place}>
-                  <h4 className="font-serif text-lg text-zinc-900">
+                <section
+                  key={entry.place}
+                  className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5 sm:p-6"
+                >
+                  <h4 className="font-serif text-xl text-zinc-900">
                     {entry.place}
                   </h4>
-                  <ol className="mt-3 list-decimal space-y-2 border-l border-emerald-700 pl-8 text-sm leading-6 text-zinc-600">
+                  <ul className="mt-4 space-y-3 text-sm leading-6 text-zinc-600">
                     {entry.items.map((item) => (
-                      <li key={item} className="pl-1">
-                        {item}
+                      <li key={item} className="flex gap-3">
+                        <span
+                          aria-hidden="true"
+                          className="mt-[0.65rem] size-1.5 shrink-0 rounded-full bg-emerald-700"
+                        />
+                        <span>{item}</span>
                       </li>
                     ))}
-                  </ol>
+                  </ul>
                 </section>
               ))}
             </div>
@@ -269,15 +276,15 @@ export default function About() {
 
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
-          <div className="flex flex-col justify-between gap-7 rounded-[1.75rem] bg-zinc-900 p-7 text-white sm:p-10 md:flex-row md:items-center">
+          <div className="flex flex-col justify-between gap-7 rounded-[1.75rem] border border-zinc-200 bg-accent p-7 text-zinc-200 sm:p-10 md:flex-row md:items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-300">
+              <p className="text-xs font-semibold text-emerald-800 uppercase tracking-[0.18em]">
                 Curriculum vitae
               </p>
-              <h2 className="mt-3 font-serif text-3xl tracking-tight text-white sm:text-4xl">
+              <h2 className="mt-3 font-serif text-3xl tracking-tight text-zinc-900 sm:text-4xl">
                 Explore my full professional background.
               </h2>
-              <p className="mt-3 max-w-xl leading-7 text-zinc-300">
+              <p className="mt-3 max-w-xl leading-7 text-zinc-700">
                 Download my CV for a closer look at my education, clinical
                 experience, and skills.
               </p>
@@ -286,7 +293,7 @@ export default function About() {
               href="/amin-abdi-ismail-cv.pdf"
               download
               target="_blank"
-              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-zinc-900 transition-all hover:-translate-y-0.5 hover:bg-emerald-50"
+              className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-black px-5 py-3 text-sm font-semibold text-zinc-200 transition-all hover:-translate-y-0.5 hover:bg-emerald-900 hover:text-white"
             >
               <Download aria-hidden="true" className="size-4" />
               Download CV

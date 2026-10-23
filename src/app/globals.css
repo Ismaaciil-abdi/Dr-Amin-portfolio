@@ -48,6 +48,33 @@ body {
   @apply font-sans;
 }
 
+/* A subtle emerald glow that stays close to the site's accent color. */
+html {
+  scrollbar-color: #10b981 #f1f5f3;
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f3;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px solid #f1f5f3;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #34d399 0%, #059669 100%);
+  box-shadow: 0 0 6px rgb(16 185 129 / 28%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #10b981 0%, #047857 100%);
+  box-shadow: 0 0 8px rgb(16 185 129 / 38%);
+}
+
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
