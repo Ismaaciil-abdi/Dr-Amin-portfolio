@@ -81,7 +81,6 @@ export default function AboutMe() {
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">
                   Education
                 </p>
-                U
                 <p className="mt-2 font-serif text-lg text-zinc-800">
                   BDS, Amoud University · 2019-2024
                 </p>
